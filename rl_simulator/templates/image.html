@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RL Simulation Results</title>
+</head>
+<body>
+    <h1>RL Simulation Results</h1>
+    <img src="data:image/png;base64,{{ image }}" alt="Embedded Image">
+</body>
+</div>
+<form action="/allocation/" method="GET">{% csrf_token%}
+    <input type="submit" value="Return">
+</form>
+<br><br>
+<form action="/plot_weigths_a2c/" method="GET">{% csrf_token%}
+    <input type="submit" value="View A2C Model Portfolio weights">
+</form>
+<br><br>
+<form action="/plot_weigths_ppo/" method="GET">{% csrf_token%}
+    <input type="submit" value="View PPO Model Portfolio weights">
+</form>
+</html>
